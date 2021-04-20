@@ -36,13 +36,13 @@
     "ios",
     "android"
   ],
-  "repository": "https://www.react-native.cn/docs/native-modules-setup",
-  "author": "dengxianghong <445585388@qq.com> (https://www.react-native.cn/docs/native-modules-setup)",
+  "repository": "https://github.com/DengXiangHong/react-native-alipay-verify",
+  "author": "dengxianghong <445585388@qq.com> (https://github.com/DengXiangHong)",
   "license": "MIT",
   "bugs": {
-    "url": "https://www.react-native.cn/docs/native-modules-setup/issues"
+    "url": "https://github.com/DengXiangHong/react-native-alipay-verify/issues"
   },
-  "homepage": "https://www.react-native.cn/docs/native-modules-setup#readme",
+  "homepage": "https://github.com/DengXiangHong/react-native-alipay-verify#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
