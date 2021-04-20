@@ -1,0 +1,6 @@
+framework module ZolozMobileRPC {
+  umbrella header "ZolozMobileRPC.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,6 @@
+framework module ZolozUtility {
+  umbrella header "ZolozUtility.h"
+
+  export *
+  module * { export * }
+}

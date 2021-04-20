@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="data-spm" content="5176" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>阿里云</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="viewport"
+        content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,viewport-fit=cover">
+  <script type="text/javascript" src="//www.aliyun.com/rgn/aliyun_assets?renderer=js"></script>
+  <script src="//g.alicdn.com/aliyun/static/0.0.11/polyfill-es6.js"></script>
+  <style>
+    *,
+        :after,
+        :before {
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+        }
+
+        blockquote,
+        body,
+        dd,
+        div,
+        dl,
+        dt,
+        fieldset,
+        form,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        input,
+        legend,
+        li,
+        ol,
+        p,
+        td,
+        textarea,
+        th,
+        ul {
+            margin: 0;
+            padding: 0
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0
+        }
+
+        fieldset,
+        img {
+            border: 3px solid #FF6A00;
+            border-radius: 50%;
+            padding:2px;
+        }
+
+        li {
+            list-style: none
+        }
+
+        caption,
+        th {
+            text-align: left
+        }
+
+        q:after,
+        q:before {
+            content: ""
+        }
+
+        input:password {
+            ime-mode: disabled
+        }
+
+        :focus {
+            outline: none
+        }
+
+        body,
+        html {
+            min-height: 100%
+        }
+
+        body {
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none
+        }
+
+        a,
+        img {
+            -webkit-touch-callout: none
+        }
+
+        body {
+            background-color: #f5f5f9
+        }
+
+        body.am-bg-white {
+            background-color: #fff
+        }
+
+        body,
+        button,
+        input,
+        select,
+        textarea {
+            font-size: .32rem;
+            line-height: 1.5;
+            color: #333;
+            font-family: Helvetica Neue, Helvetica, STHeiTi, sans-serif
+        }
+
+        input {
+            line-height: normal
+        }
+
+        a {
+            color: #0ae;
+            text-decoration: none
+        }
+
+        .fn-hide {
+            display: none
+        }
+
+        .fn-left {
+            float: left
+        }
+
+        .fn-right {
+            float: right
+        }
+
+        .am-content {
+            margin-left: .2rem;
+            margin-right: .2rem
+        }
+
+        .am-content h5 {
+            margin: 0;
+            padding: 0;
+            font-weight: 400;
+            line-height: 1.5
+        }
+
+        .am-fixed {
+            position: fixed !important;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 99;
+            width: 100%
+        }
+
+        .am-fixed-bottom {
+            top: inherit;
+            bottom: 0
+        }
+
+        .user-select {
+            -webkit-user-select: auto;
+            -moz-user-select: auto;
+            -ms-user-select: auto;
+            user-select: auto
+        }
+
+        .am-checkbox.agreement label>*,
+        .am-checkbox.argument label>*,
+        .am-list label>* {
+            pointer-events: none
+        }
+
+        .am-checkbox {
+            display: inline-block;
+            position: relative;
+            line-height: 24px
+        }
+
+        .am-checkbox .icon-check,
+        .am-checkbox.tiny .icon-check {
+            position: absolute;
+            top: 50%;
+            width: 22px;
+            height: 22px;
+            margin-right: 2px;
+            margin-top: -11px;
+            -webkit-transform: rotate(0)
+        }
+
+        .am-checkbox .icon-check:before,
+        .am-checkbox.tiny .icon-check:before {
+            content: " ";
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            top: 0;
+            left: 0;
+            -webkit-transform: scale(.5);
+            transform: scale(.5);
+            -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
+            box-sizing: border-box;
+            border: 3px solid #888;
+            border-radius: 100%;
+            -webkit-background-clip: padding-box
+        }
+
+        .am-checkbox .icon-check:after,
+        .am-checkbox.tiny .icon-check:after {
+            position: absolute;
+            display: none;
+            z-index: 999;
+            content: " ";
+            top: 4px;
+            right: 8px;
+            width: 5px;
+            height: 10px;
+            border: 1px solid #fff;
+            border-width: 0 1px 1px 0;
+            -webkit-transform: rotate(45deg)
+        }
+
+        .am-checkbox input {
+            position: absolute;
+            top: 50%;
+            left: 15px;
+            width: 20px;
+            height: 20px;
+            margin-top: -8px;
+            opacity: 0;
+            border: 0;
+            -webkit-appearance: none
+        }
+
+        .am-checkbox input:checked+.icon-check:before {
+            border-width: 0;
+            border-color: #108ee9;
+            background-color: #108ee9
+        }
+
+        .am-checkbox input:checked+.icon-check:after {
+            display: block;
+            border-color: #fff
+        }
+
+        .am-checkbox input:disabled+.icon-check:before {
+            border-width: 3px;
+            border-color: #ccc;
+            background-color: #e1e1e1
+        }
+
+        .am-checkbox input:disabled:checked+.icon-check:after {
+            display: block;
+            border-color: #adadad
+        }
+
+        .am-checkbox.middle .icon-check {
+            width: 22px;
+            height: 22px;
+            margin-right: 2px;
+            margin-top: -12px
+        }
+
+        .am-checkbox.middle .icon-check:before {
+            border-radius: 100%;
+            -webkit-background-clip: padding-box
+        }
+
+        .am-checkbox.middle .icon-check:after {
+            top: 4px;
+            right: 8px;
+            width: 6px;
+            height: 11px
+        }
+
+        .am-checkbox.middle label {
+            text-indent: 28px
+        }
+
+        .am-checkbox.mini .icon-check {
+            margin-top: -7px;
+            margin-right: 4px
+        }
+
+        .am-checkbox.mini .icon-check:before {
+            content: " ";
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            top: 0;
+            left: 0;
+            -webkit-transform: scale(.5);
+            transform: scale(.5);
+            -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
+            box-sizing: border-box;
+            border: 3px solid #888;
+            border-radius: 100%;
+            -webkit-background-clip: padding-box
+        }
+
+        .am-checkbox.mini label {
+            text-indent: 24px
+        }
+
+        .am-checkbox.agreement,
+        .am-checkbox.argument {
+            padding: 5px 0;
+            font-size: 15px
+        }
+
+        .am-checkbox.agreement .icon-check,
+        .am-checkbox.argument .icon-check {
+            margin-left: 15px;
+            margin-top: -11px
+        }
+
+        .am-checkbox.agreement label,
+        .am-checkbox.argument label {
+            color: #888;
+            position: relative;
+            display: inline-block;
+            padding-left: 16px;
+            text-indent: 28px
+        }
+
+        .am-list .am-list-item.am-list-item-check,
+        .am-list .am-list-item.am-list-item-radio,
+        .am-list .am-list-item.check,
+        .am-list .am-list-item.radio {
+            position: relative
+        }
+
+        .am-list .am-list-item.am-list-item-check .am-checkbox,
+        .am-list .am-list-item.am-list-item-radio .am-checkbox,
+        .am-list .am-list-item.check .am-checkbox,
+        .am-list .am-list-item.radio .am-checkbox {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1
+        }
+
+        .am-list .am-list-item.am-list-item-check,
+        .am-list .am-list-item.check {
+            padding-left: 51px
+        }
+
+        .am-list .am-list-item.am-list-item-check .am-checkbox .icon-check,
+        .am-list .am-list-item.check .am-checkbox .icon-check {
+            left: 15px
+        }
+
+        .am-list .am-list-item.am-list-item-check.mini,
+        .am-list .am-list-item.check.mini {
+            padding-left: 45px
+        }
+
+        .am-list .am-list-item.am-list-item-radio,
+        .am-list .am-list-item.radio {
+            padding-right: 46px
+        }
+
+        .am-list .am-list-item.am-list-item-radio .am-checkbox .icon-check,
+        .am-list .am-list-item.radio .am-checkbox .icon-check {
+            right: 15px;
+            margin-right: -2px
+        }
+
+        .am-list .am-list-item.am-list-item-radio .am-checkbox .icon-check:before,
+        .am-list .am-list-item.radio .am-checkbox .icon-check:before {
+            border: 0
+        }
+
+        .am-list .am-list-item.am-list-item-radio .am-checkbox .icon-check:after,
+        .am-list .am-list-item.radio .am-checkbox .icon-check:after {
+            border-width: 0 2px 2px 0
+        }
+
+        .am-list .am-list-item.am-list-item-radio .am-checkbox input:checked+.icon-check,
+        .am-list .am-list-item.am-list-item-radio .am-checkbox input:checked+.icon-check:before,
+        .am-list .am-list-item.radio .am-checkbox input:checked+.icon-check,
+        .am-list .am-list-item.radio .am-checkbox input:checked+.icon-check:before {
+            background-color: transparent
+        }
+
+        .am-list .am-list-item.am-list-item-radio .am-checkbox input:checked+.icon-check:after,
+        .am-list .am-list-item.radio .am-checkbox input:checked+.icon-check:after {
+            border-color: #108ee9
+        }
+
+        .am-listlabel.hover,
+        .am-listlabel:active {
+            background-color: #ddd
+        }
+
+        @media screen and (min-width:360px) and (max-width:360px),
+        screen and (min-width:384px) and (max-width:384px),
+        screen and (min-width:412px) and (max-width:412px) {
+
+            .am-checkbox .icon-check,
+            .am-checkbox.mini .icon-check,
+            .am-checkbox.tiny .icon-check {
+                margin-top: -10px
+            }
+        }
+
+        .android .am-checkbox .icon-check,
+        .android .am-checkbox.mini .icon-check,
+        .android .am-checkbox.tiny .icon-check {
+            margin-top: -10px
+        }
+
+        .fd-fix-button,
+        body,
+        html {
+            height: 100%;
+            background: #fff;
+            font-size: 14px;
+            font-family: PingFang SC
+        }
+
+        @media only screen and (device-width:375px) and (device-height:812px) and (-webkit-device-pixel-ratio:3) {
+            body {
+                padding-top: constant(safe-area-inset-top)
+            }
+        }
+
+        .fd-fix-button {
+            position: relative;
+            width: 100%;
+            text-align: center
+        }
+
+        .fd-fix-button .close {
+            background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAABcklEQVRYR+2YvU0EMRCFn+sgI4ReCEmIsdsgQrSwExMhMgqgCaAE2jCytHey7vwzP97DJ92mO5737bM947XD5I+bnA8XQOsMHTnovX8C8Oic+wTwvCzLj1WkNT6EcBNjfAFwDeCdiJL+/ikBfgG4XSO+nXP3W0GucG+Z3i8RXTUBQwivMcaHLGgTyAJckvwgorseYLI8/6oUPxSyAlfUKO5iSQLp+pTmrpYZaSIOqCZnsw5qEtZAtbm6hVqbOAe15OgCJiGLgGVs0mYBaiGtcCJAKeQIODEgF3IUnAqwB5nejyz07DV4WD5qLq1xu15u7kJqwIaT+beYW6QJsANphlOvQUYRNk/tTsPkYGUdzjHFU2+SVp379zLDKcKcGM7xTLxJJMKS2BYse5NoBDVjDmFZgBYhy1jWFFsFer2790t7vkf+Ec5xDxity4Hz++3cwjmLk0cOTn/14b2f+/Jo+us3bo88VRyrk5wKpqRzAbS6/wdhdPI4NgJAHAAAAABJRU5ErkJggg==") no-repeat 20px 32px;
+            background-size: 19px auto;
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        @supports (top:constant(safe-area-inset-top)) {
+            .fd-fix-button .close {
+                top: 20px;
+            }
+        }
+
+        @supports (top:env(safe-area-inset-top)) {
+            .fd-fix-button .close {
+                top: 20px;
+            }
+        }
+
+        .fd-fix-button h1 {
+            font-weight: 400;
+            font-size: 22px;
+            padding-top: 30px;
+            padding-bottom: 30px
+        }
+
+        .fd-fix-button h2 {
+            padding: 0;
+            font-weight: 400;
+            font-size: 16px
+        }
+
+        .fd-fix-button button {
+            margin-top: 54px;
+            border: 0;
+            color: #fff;
+            background-color: #FF6A00;
+            outline: 0;
+            -webkit-appearance: none;
+            display: inline-block;
+            width: 70%;
+            padding: 0 4px;
+            height: 47px;
+            line-height: 47px;
+            font-size: 18px;
+            text-align: center;
+            -webkit-box-sizing: border-box;
+            border-radius: 4px;
+            -webkit-background-clip: padding-box
+        }
+
+        .fd-fix-button button[disabled] {
+            background-color: #ddd;
+        }
+
+        .fd-fix-button .am-checkbox {
+            display: block
+        }
+
+        .fd-fix-button .agreement {
+            height: 40px;
+            line-height: 40px
+        }
+
+        .fd-fix-button .agreement input {
+            vertical-align: middle;
+            margin-top: -2px
+        }
+
+        .fd-fix-button .agreement a {
+            color: #108ee9
+        }
+
+        .fd-fix-button .agreement .label {
+            color: #888;
+            display: inline;
+            padding-left: 30px
+        }
+
+        .fd-fix-button .agreement .icon-check {
+            margin-left: 0
+        }
+
+        .fd-fix-button img {
+            width: 250px;
+            height: 250px;
+            margin-bottom: 20px;
+            border: 3px solid #FF6A00;
+            border-radius: 50%;
+            padding:2px;
+        }
+
+        .fd-fix-button .agreementContent {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            background-color: #fff;
+            -webkit-overflow-scrolling: touch;
+            overflow-y: scroll
+        }
+
+        .fd-fix-button .agreementContent p {
+            text-align: left;
+            color: #108ee9;
+            height: 30px;
+            line-height: 30px;
+            font-size: 16px;
+            padding-top: 32px;
+            padding-left: 15px
+        }
+
+        .fd-fix-button iframe {
+            width: 100%;
+            height: 95%;
+            overflow: auto;
+            border: none
+        }
+
+        @media (min-height:480px) and (max-height:600px) {
+            .fd-fix-button h1 {
+                padding-top: 30px
+            }
+
+            .fd-fix-button img {
+                width: 200px;
+                height: 200px;
+                margin-bottom: 10px;
+                border: 3px solid #FF6A00;
+                border-radius: 50%;
+                padding:2px;
+            }
+
+            .fd-fix-button button {
+                margin-top: 24px
+            }
+        }
+        .text{
+          color:#fff;
+        }
+  </style>
+</head>
+
+<body data-spm="">
+ <script type="text/javascript"
+        src="https://g.alicdn.com/dt/tracker/3.5.4/??tracker.Tracker.js,tracker.performanceTrackerPlugin.js"
+        crossorigin></script>
+    <script type="text/javascript">
+
+        var tracker = new window.Tracker({
+            pid: 'zoloz',
+            plugins: [
+                [window.performanceTrackerPlugin]
+            ],
+        });
+
+        // 启动 tracker 并监听全局 JS 异常
+        tracker.install();
+    </script>
+    <div class="fd-fix-button">
+        <div class="close"></div>
+        <h1 class='text'>刷脸认证</h1>
+        <img
+            src="https://gw.alicdn.com/tfscom/TB1Imdsw7T2gK0jSZFkXXcIQFXa.jpg" />
+        <h2>请把脸放在圆圈内</h2>
+        <h2>商户将获得您的人脸照片用于安全验证</h2>
+        <button class="button">我已了解，开始拍摄</button>
+        <div class="agreement am-checkbox">
+            <input type="checkbox" id="agree">
+        </div>
+        <div class="agreementContent">
+            <p>&lt; 返回</p>
+            <iframe id="content" src="https://render.alipay.com/p/f/fd-j8mezje2/index.html" frameborder="0"></iframe>
+        </div>
+    </div>
+    <script>
+        Function.prototype.before = function (beforefn) {
+            var __ = this;
+            return function () {
+                beforefn.apply(this, arguments);
+                return __.apply(this, arguments);
+            }
+        };
+        Function.prototype.after = function (afterfn) {
+            var __ = this;
+            return function () {
+                var ret = __.apply(this, arguments);
+                afterfn.apply(this, arguments);
+                return ret;
+            }
+        };
+        var ua = window.navigator.userAgent.toLocaleLowerCase();
+        var isAndroid = ua.indexOf('android') > -1;
+        var isIOS = ua.indexOf('iphone') > -1 || ua.indexOf('ipad') > -1;
+        document.addEventListener('DOMContentLoaded', function () {
+            var button = document.querySelector('button');
+            // var checkbox = document.querySelector('#agree');
+            // var label = document.querySelector('.label');
+            var agreement = document.querySelector('a');
+            var agreementContent = document.querySelector('.agreementContent');
+            var close = document.querySelector('.close');
+            var clicked = false;
+
+            // var console = document.getElementById('console');
+            // var log = '';
+
+            function check() {
+                if (!checkbox.checked) {
+                    checkbox.checked = true;
+                    button.removeAttribute('disabled');
+                } else {
+                    checkbox.checked = false;
+                    button.setAttribute('disabled', 'disabled');
+                }
+            }
+
+            function beforeClick() {
+                if (clicked) return;
+                clicked = true;
+            }
+
+            function afterCick() {
+                clicked = false;
+            }
+
+            //默认勾选
+            // check();
+
+            //点击协议页面返回
+            agreementContent.querySelector('p').addEventListener('touchend', (function (e) {
+                e.preventDefault();
+                agreementContent.style.display = 'none';
+            }).before(beforeClick).after(afterCick));
+
+            //点击协议链接
+            // agreement.addEventListener('touchend', (function (e) {
+            //     agreementContent.style.display = 'block';
+                //             if (isAndroid) {
+                //                 prompt("agreementClick");
+                //             } else if (isIOS) {
+                //                 location.href = "FaceTTP://Start?agreementClick";
+                //             } else {
+                ////                 alert('抱歉,系统异常.');
+                //             }
+            // }).before(beforeClick).after(afterCick));
+
+            /**
+             * checkbox操作注释掉
+             */
+
+            // label.addEventListener('touchend', (function (e) {
+            //     e.preventDefault();
+            //     check();
+            // }).before(beforeClick).after(afterCick));
+
+
+            // checkbox.addEventListener('change', (function (e) {
+            //     e.preventDefault();
+            //     check();
+            //     // log += "\n" + 'checkbox:'+'change'+'；'+checkbox.checked;
+            //     // console.textContent =log;
+            //
+            // }).before(beforeClick).after(afterCick));
+            //
+            //
+            // document.querySelector('.icon-check').addEventListener('touchend', function (e) {
+            //     e.preventDefault();
+            //     check();
+            //     // log+= "\n" + 'icon:'+'touchend';
+            //     // console.textContent =log;
+            // });
+
+            document.querySelector('.agreement').addEventListener('touchend', function (e) {
+                e.preventDefault();
+                return;
+            });
+
+
+            button.addEventListener('touchend', (function (e) {
+                e.preventDefault();
+                if (button.getAttribute('disabled')) {
+                    return;
+                } else {
+                    if (isAndroid) {
+                        prompt("face_auth");
+                    } else if (isIOS) {
+                        location.href = "FaceTTP://Start?FaceCollect";
+                    } else {
+                        alert('抱歉,系统异常.');
+                    }
+                }
+            }).before(beforeClick).after(afterCick));
+
+            close.addEventListener('touchend', (function (e) {
+                e.preventDefault();
+                if (isAndroid) {
+                    prompt("navi_close");
+                } else if (isIOS) {
+                    location.href = "FaceTTP://Start?NaviClose";
+                } else {
+                    alert('抱歉,系统异常.');
+                }
+
+            }).before(beforeClick).after(afterCick));
+
+
+
+        });
+
+        // 参考第二步选择合适的方式获取到 Tracker
+        var tracker = new Tracker({
+            pid: 'zoloz',
+        });
+
+        tracker.log({
+            code: 11,
+            msg: 'js正常加载',
+        });
+    </script>
+</body>
+
+</html>

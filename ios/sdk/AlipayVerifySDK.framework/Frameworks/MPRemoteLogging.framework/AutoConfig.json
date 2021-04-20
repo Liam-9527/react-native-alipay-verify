@@ -1,0 +1,24 @@
+{
+    "class": "APLogAdditions",
+    "header": "<MPRemoteLogging/APLogAddions.h>",
+    "title": {
+        "chinese": "日志埋点",
+        "english": "Remote Logging"
+    },
+    "entries": [
+                    {
+                        "title": {
+                            "chinese": "网关地址",
+                            "english": "Gateway"
+                        },
+                        "declaration": "- (NSString*)logServerURL",
+                        "description": {
+                            "chinese": "重写该方法返回远程日志服务器地址，格式为'https://mdap.alipaylog.com/loggw/log.do'。\n如果使用了MPaaS提供的默认系统设置服务来进行环境切换，重写该方法会使设置服务失效。\n点击右边的删除按钮可以去掉该配置项。",
+                            "english": "Override this method and return your remote logging server gateway which format is 'https://mdap.alipaylog.com/loggw/log.do'.\nIf you want to use the default iOS system setting service of MPaaS to change environment, do not override this method.\nClick the delete button on right side to remove this entry."
+                        },
+                        "optional": true,
+                        "type": "string",
+                        "default": "https://<type here>/loggw/log.do"
+                    }
+                ]
+}
