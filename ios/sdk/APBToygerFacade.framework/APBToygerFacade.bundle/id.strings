@@ -1,0 +1,48 @@
+/* 
+  id.strings
+  APBToygerFacade
+
+  Created by Jie Ding on 2017/11/27.
+  Copyright © 2017年 Alipay. All rights reserved.
+*/
+
+"APBToygerFacade:取消"="Batal";
+"APBToygerFacade:再试一次"="Coba lagi";
+"APBToygerFacade:退出"="Keluar";
+"APBToygerFacade:确定"="OK";
+"APBToygerFacade:继续"="Lanjut";
+"APBToygerFacade:我知道了"="Mengerti";
+"APBToygerFacade:其他登录方式"="Cara lain untuk masuk";
+"APBToygerFacade:刷脸失败"="Maaf, kami gagal memindai wajah anda";
+"APBToygerFacade:当前设备不支持刷脸"="Pemindai wajah tidak didukung di ponsel anda";
+"APBToygerFacade:无法启动相机"="Tidak dapat mengakses kamera";
+"APBToygerFacade:请到\“设置-隐私-相机\”开启权限"="Mohon berikan izin ke DANA untuk mengakses kamera dari menu Pengaturan > Privasi > Kamera";
+"APBToygerFacade:立即开启"="OK";
+"APBToygerFacade:刷脸仅在iOS7及以上系统可用"="Pemindai wajah hanya tersedia di versi iOS7 atau lebih";
+"APBToygerFacade:系统错误"="Terjadi kesalahan di sistem";
+"APBToygerFacade:确定退出吗?"="Apakah anda yakin untuk keluar?";
+"APBToygerFacade:露个脸就能通过"="Anda cukup memverifikasi wajah anda untuk lanjut ke tahapan berikutnya.";
+"APBToygerFacade:操作超时"="Waktu habis";
+"APBToygerFacade:正对手机,更容易成功"="Posisikan wajah anda di tengah bingkai dan pastikan pencahayaan ruangan  anda cukup";
+"APBToygerFacade:本次操作失败"="Maaf, kami gagal memindai wajah anda";
+"APBToygerFacade:网络不给力"="Tidak terhubung ke Internet";
+"APBToygerFacade:登录中断"="Proses Login terganggu";
+"APBToygerFacade:验证中断"="Pemindaian wajah terganggu";
+"APBToygerFacade:未检测到眨眼"="Eye blink not detected";
+"APBToygerFacade:拿起手机眨眨眼"="Posisikan wajah anda ditengah bingkai";
+"APBToygerFacade:没有检测到眨眼"="Eye blink not detected";
+"APBToygerFacade:脸部亮一点"="Pencahayaan Kurang";
+"APBToygerFacade:近一点"="Mohon mendekat";
+"APBToygerFacade:把脸移入框内"="Wajah tak terdeteksi";
+"APBToygerFacade:请把脸移入框内保持不动"="Posisikan wajah anda ditengah bingkai";
+"APBToygerFacade:请正对手机"="Tidak ada wajah yang terdeteksi";
+"APBToygerFacade:再清晰一点"="Wajah kurang jelas";
+"APBToygerFacade:请调整姿势"="Wajah kurang jelas";
+"APBToygerFacade:眨眨眼"="Mohon berkedip";
+"APBToygerFacade:请保持不动"="Tahan sebentar";
+"APBToygerFacade:离远一点"="Mohon menjauh";
+"APBToygerFacade:没有检测到脸"="Wajah tak terdeteksi";
+"APBToygerFacade:当前系统不支持刷脸"="Pemindai wajah tidak didukung di ponsel anda";
+"APBToygerFacade:正在处理"="Sedang diproses...";
+"APBToygerFacade:刷脸仅在iOS7及以上版本可用"="Pemindai wajah hanya tersedia di versi iOS7 atau lebih";
+"APBToygerFacade:人脸识别"="Verifikasi Wajah";

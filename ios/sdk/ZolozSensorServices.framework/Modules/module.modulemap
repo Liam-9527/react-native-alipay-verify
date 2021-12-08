@@ -1,0 +1,6 @@
+framework module ZolozSensorServices {
+  umbrella header "ZolozSensorServices.h"
+
+  export *
+  module * { export * }
+}

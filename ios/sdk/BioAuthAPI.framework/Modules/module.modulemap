@@ -1,0 +1,6 @@
+framework module BioAuthAPI {
+  umbrella header "BioAuthAPI.h"
+
+  export *
+  module * { export * }
+}

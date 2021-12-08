@@ -1,0 +1,6 @@
+framework module BioAuthEngine {
+  umbrella header "BioAuthEngine.h"
+
+  export *
+  module * { export * }
+}
