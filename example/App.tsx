@@ -16,7 +16,6 @@ import {
   StatusBar,
   DeviceEventEmitter,
   EmitterSubscription,
-  Platform,
   AppState
 } from "react-native";
 import AlipayVerify, {ResultStatusCode, AlipayVerifyEvent} from "react-native-alipay-verify";

@@ -1,5 +1,4 @@
 #import "AppDelegate.h"
-#import "AlipayVerify.h"
 #import <React/RCTBridge.h>
 #import <React/RCTBundleURLProvider.h>
 #import <React/RCTRootView.h>
@@ -49,8 +48,6 @@ static void InitializeFlipper(UIApplication *application) {
   rootViewController.view = rootView;
   self.window.rootViewController = rootViewController;
   [self.window makeKeyAndVisible];
-  // 处理回调
-  [AlipayVerify handleCallbackLaunchOptions:launchOptions];
   // 尽早初始化
   [ZolozSdk init];
   return YES;
@@ -65,10 +62,4 @@ static void InitializeFlipper(UIApplication *application) {
 #endif
 }
 
-- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey, id> *)options
-{
-  // 处理回调
-  [AlipayVerify handleCallback:url];
-  return YES;
-}
 @end

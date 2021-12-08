@@ -4,7 +4,7 @@
 [![Build Status](https://img.shields.io/travis/react-native-alipay-verify/master.svg)](https://travis-ci.org/react-native-alipay-verify)
 [![License](https://img.shields.io/npm/l/react-native-alipay-verify.svg)](./LICENSE)
 
-支付宝实名认证（人脸识别，生物识别）,移动端调起实名认证流程进行了封装 📦 ， 真实姓名+身份证号+人脸识别
+🍺🍺🍺 支付宝实名认证（人脸识别，生物识别）,移动端调起实名认证流程进行了封装 📦 ， 真实姓名+身份证号+人脸识别
 
 身份验证官方文档：https://opendocs.alipay.com/open/20181012100420932508/intro
 
@@ -24,7 +24,8 @@
 - iOS >= 9.0
 - Android >= 4.4
 
-AliPaySDK library :
+    
+SDK library :
 
 - iOS: v2.1.1
 - Android: v2.0.0
@@ -41,7 +42,7 @@ or
 yarn add react-native-alipay-verify
 ```
 
-IOS 需要手动处理额外的步骤 [IOS Setup](./docs/ios-setup.md)
+IOS 需要手动处理额外的步骤 ➡️ [IOS Setup](./docs/ios-setup.md)
 
 # Usage
 
@@ -68,6 +69,7 @@ AlipayVerify.verify(verifyData.certifyId, verifyData.certifyUrl).then((verifyRes
           break;
         case ResultStatusCode.AWAIT_VERIFY:
           // 等待认证结果， 通过监听方式得到认证结束通知
+          
           break;
         default:
           message = "调起支付宝SDK失败，错误码："+ verifyResult
@@ -76,12 +78,18 @@ AlipayVerify.verify(verifyData.certifyId, verifyData.certifyUrl).then((verifyRes
       console.log(message+ " " + verifyResult);
 }).catch((error) => console.log(error));
 
-// 监听回调 此处为返回当前app的事件。认证成功与否需要前往服务器验证
+// 监听回调 此处为认证结束的事件。认证成功与否需要前往服务器验证
 DeviceEventEmitter.addListener(AlipayVerifyEvent.EVENT_QUERY_CERTIFY_RESULT,(event) => {
       console.log("监听："+ JSON.stringify(event));
       // 向商户服务器 证实 认证结果
-      
 })
+
+// 防止错过认证结束通知 回到前台时处理 认证状态
+AppState.addEventListener('change', (appState) => {
+  if(appState === 'active'){
+    // 向商户服务器 证实 认证结果
+  }
+});
 ```
 
 # TODO
