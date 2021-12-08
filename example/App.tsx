@@ -6,7 +6,19 @@
  * @link https://github.com/DengXiangHong/react-native-alipay-verify
  */
 import React, {Component} from "react";
-import {Alert, Button, StyleSheet, Text, TextInput, View, StatusBar, DeviceEventEmitter, EmitterSubscription} from "react-native";
+import {
+  Alert,
+  Button,
+  StyleSheet,
+  Text,
+  TextInput,
+  View,
+  StatusBar,
+  DeviceEventEmitter,
+  EmitterSubscription,
+  Platform,
+  AppState
+} from "react-native";
 import AlipayVerify, {ResultStatusCode, AlipayVerifyEvent} from "react-native-alipay-verify";
 type State = {
   bizCode: string,
@@ -20,6 +32,7 @@ export default class App extends Component<any, State> {
   constructor(props: any) {
     super(props);
     this.state = {
+      certifyId: "",
       bizCode: "",
       name: "",
       no: "",
@@ -31,14 +44,19 @@ export default class App extends Component<any, State> {
     AlipayVerify.getBizCode()
       .then((bizCode) => {
         this.setState({bizCode});
-      })
-      .catch((error) => console.log(error));
-
+      }).catch((error) => console.log(error));
     // 监听支付宝认证结果
     this.eventListener = DeviceEventEmitter.addListener(AlipayVerifyEvent.EVENT_QUERY_CERTIFY_RESULT,(event) => {
       console.log("监听："+ JSON.stringify(event));
       this.queryCertifyResult(JSON.parse(JSON.stringify(event)).certifyId);
     })
+    // 回到前台时处理 认证状态
+    AppState.addEventListener('change', (appState) => {
+      if(appState === 'active' && this.state.certifyId){
+        console.log("监听："+ appState);
+        this.queryCertifyResult(this.state.certifyId);
+      }
+    });
   }
 
   componentWillUnmount() {
@@ -106,6 +124,7 @@ export default class App extends Component<any, State> {
   }
 
   verify(verifyData: any) {
+    this.setState({certifyId:verifyData.certifyId});
     AlipayVerify.verify(verifyData.certifyId, verifyData.certifyUrl).then((verifyResult) => {
       let message = ""
       switch (Number(verifyResult)) {

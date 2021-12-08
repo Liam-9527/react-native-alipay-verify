@@ -8,9 +8,4 @@
 
 @interface AlipayVerify  : RCTEventEmitter <RCTBridgeModule>
 
-// 处理app回调
-+ (void) handleCallback:(NSURL *)url;
-// 处理app回调
-+ (void) handleCallbackLaunchOptions:(NSDictionary *)launchOptions;
-
 @end

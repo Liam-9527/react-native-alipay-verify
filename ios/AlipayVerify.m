@@ -4,16 +4,9 @@
 //  Created by Deng Xiang Hong on 2021/12/07.
 //
 #import "AlipayVerify.h"
-#import<AlipayVerifySDK/APVerifyService.h>
 #import <AlipayVerifySDK/APVerifyService.h>
 
-NSString *const kEventEmitterManagerEvent  = @"EVENT_QUERY_CERTIFY_RESULT";
-
-@implementation AlipayVerify {
-    bool hasListeners;
-    NSString *Id;
-}
-
+@implementation AlipayVerify
 
 RCT_EXPORT_MODULE()
 
@@ -36,7 +29,6 @@ RCT_REMAP_METHOD(verify,
                  withRejecter:(RCTPromiseRejectBlock)reject)
 {
     NSString *bizcode = [[APVerifyService sharedService] bizCode];
-    Id = certifyId;
     UIViewController *rootViewController = [UIApplication sharedApplication].delegate.window.rootViewController;
     [[APVerifyService sharedService] startVerifyService:@{@"url": certifyUrl?:@"test-certifyUrl",
                                                           @"certifyId": certifyId?:@"test-certifyId",
@@ -48,37 +40,9 @@ RCT_REMAP_METHOD(verify,
     }];
 }
 
-// 处理回调
-+ (void) handleCallback:(NSURL *)url
-{
-    AlipayVerify *alipayVerify = [[AlipayVerify alloc]init];
-    [alipayVerify calendarEventReminderReceived];
-}
-
-// 处理回调
-+ (void) handleCallbackLaunchOptions:(NSDictionary *)launchOptions
-{
-    AlipayVerify *alipayVerify = [[AlipayVerify alloc]init];
-    [alipayVerify calendarEventReminderReceived];
-}
-
 - (NSArray<NSString *> *)supportedEvents
 {
-    return @[kEventEmitterManagerEvent];
-}
-
-- (void) calendarEventReminderReceived {
-    if (hasListeners) {
-      [self sendEventWithName:kEventEmitterManagerEvent body:@{@"certifyId": Id}];
-    }
-}
-
--(void)startObserving {
-    hasListeners = YES;
-}
-
--(void)stopObserving {
-    hasListeners = NO;
+    return @[@"EventReminder"];
 }
 
 @end
