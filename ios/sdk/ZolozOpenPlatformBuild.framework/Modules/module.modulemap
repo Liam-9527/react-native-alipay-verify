@@ -1,6 +1,0 @@
-framework module ZolozOpenPlatformBuild {
-  umbrella header "ZolozOpenPlatformBuild.h"
-
-  export *
-  module * { export * }
-}
