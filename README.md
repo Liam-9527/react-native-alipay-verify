@@ -51,11 +51,11 @@ import AlipayVerify, {ResultStatusCode, AlipayVerifyEvent} from "react-native-al
 
 // 获取场景码
 AlipayVerify.getBizCode().then((bizCode) => {
-	console.log(bizCode)
+	console.log(bizCode);
 }).catch((error) => console.log(error));
 
 // 发起人脸识别认证
-AlipayVerify.verify(verifyData.certifyId, verifyData.certifyUrl).then((verifyResult) => {
+AlipayVerify.verify(certifyId, certifyUrl).then((verifyResult) => {
       let message = ""
       switch (Number(verifyResult)) {
         case ResultStatusCode.NETWORK_ANOMALY: message = '网络异常';
@@ -64,11 +64,12 @@ AlipayVerify.verify(verifyData.certifyId, verifyData.certifyUrl).then((verifyRes
           break;
         case ResultStatusCode.USER_CANCEL: message = '用户取消认证';
           break;
-        case ResultStatusCode.VERIFY_SUCCESS:
-          // 向认证服务器 证实 认证结果
+        case ResultStatusCode.VERIFY_SUCCESS: message = '认证成功';
+          // 此状态需向商户服务器证实认证结果
+          
           break;
         case ResultStatusCode.AWAIT_VERIFY:
-          // 等待认证结果， 通过监听方式得到认证结束通知
+          // 等待认证结束，通过监听方式得到认证结束通知
           
           break;
         default:
@@ -82,16 +83,32 @@ AlipayVerify.verify(verifyData.certifyId, verifyData.certifyUrl).then((verifyRes
 DeviceEventEmitter.addListener(AlipayVerifyEvent.EVENT_QUERY_CERTIFY_RESULT,(event) => {
       console.log("监听："+ JSON.stringify(event));
       // 向商户服务器 证实 认证结果
+  
 })
 
 // 防止错过认证结束通知 回到前台时处理 认证状态
 AppState.addEventListener('change', (appState) => {
   if(appState === 'active'){
     // 向商户服务器 证实 认证结果
+    
   }
 });
 ```
-
+# Run Example Project
+**git clone**
+``` shell
+git clone https://github.com/DengXiangHong/react-native-alipay-verify.git
+cd react-native-alipay-verify/example && yarn install
+```
+**ios**
+``` shell
+pod install
+yarn ios
+```
+**android**
+``` shell
+yarn android
+```
 # TODO
 
 - ~~iOS设备下，场景码获取始终为 FACE_ALIPAY_SDK~~

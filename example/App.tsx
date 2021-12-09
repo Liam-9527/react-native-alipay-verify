@@ -4,6 +4,7 @@
  * @Description 支付宝实名认证示例
  * @createTime 2021-11-24 15:00:00
  * @link https://github.com/DengXiangHong/react-native-alipay-verify
+ * TODO 需要更换对应的API接口即可使用
  */
 import React, {Component} from "react";
 import {
