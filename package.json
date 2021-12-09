@@ -1,6 +1,6 @@
 {
   "name": "react-native-alipay-verify",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "react-native-alipay-verify",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -34,7 +34,9 @@
   "keywords": [
     "react-native",
     "ios",
-    "android"
+    "android",
+    "alipay",
+    "verify"
   ],
   "repository": "https://github.com/DengXiangHong/react-native-alipay-verify",
   "author": "dengxianghong <445585388@qq.com> (https://github.com/DengXiangHong)",
