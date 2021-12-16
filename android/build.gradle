@@ -62,7 +62,12 @@ dependencies {
     implementation "com.facebook.react:react-native:+"  // From node_modules
 
     // AliPaySDK
-    implementation fileTree(dir: 'libs', include: ['*.jar', '*.aar'])
+    compile fileTree(dir: 'libs', include: ['*.jar'])
     compile "com.alibaba:fastjson:1.2.48@jar"
+    compile(name: 'deviceid-release-6.0.6.20201030', ext: 'aar')
+    compile(name: 'faceverify-1.0.1.210129151040', ext: 'aar')
+    compile(name: 'stlport_shared-1.0', ext: 'aar')
+
+    compile (name:'verifysdk-1.0.0.210207214720', ext:'aar')
     compile 'com.squareup:otto:1.3.8'
 }
