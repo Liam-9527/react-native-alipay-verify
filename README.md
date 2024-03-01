@@ -97,7 +97,7 @@ AppState.addEventListener('change', (appState) => {
 # Run Example Project
 **git clone**
 ``` shell
-git clone https://github.com/DengXiangHong/react-native-alipay-verify.git
+git clone https://github.com/Alan0725/react-native-alipay-verify.git
 cd react-native-alipay-verify/example && yarn install
 ```
 **ios**
